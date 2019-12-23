@@ -1,0 +1,14 @@
+package jisuanqi;
+
+public class OperationFactory {
+    public static Operation getOperation(String oper){
+        Operation operation = null;
+        if("+".equals(oper)){
+           operation = new AddOperation();
+        }
+        if("-".equals(oper)){
+            operation = new SubOperation();
+        }
+      return operation;
+    }
+}
